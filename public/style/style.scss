@@ -212,215 +212,195 @@ body {
     }
   }
 }
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$secondary-color: rgb(237, 237, 237);
-$accent-color: #0f0f0f;
-$accent-second-color: #feda79;
-$primary-color: #fffff0;
-
-@mixin flexbox($align, $justify) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  // font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  //   Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans,
-  //   sans-serif;
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-  display: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-image: url(../img/grid2.svg);
-  background-color: $primary-color;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  //   font-family: "Lato", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-}
-
-.floating-nav {
-  position: fixed;
-  bottom: -50rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 9999;
-  nav {
-    backdrop-filter: blur(1rem);
-    background-color: #0f0f0fb6;
-    border: 1px solid #2a2a2ab6;
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
-    @include flexbox(center, center);
-    gap: 2rem;
-    a {
-      text-decoration: none;
-      text-transform: capitalize;
-      color: $primary-color;
-      font-size: 0.75rem;
-      &:hover {
-        color: $accent-second-color;
-      }
-    }
+.overlap-section {
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  z-index: 0;
+  .banner {
+    height: 7rem;
+    background-color: $accent-color;
+    border-radius: 1rem 1rem 0 0;
   }
-}
-
-.main-container {
-  position: fixed;
-  transition: top 0.3s;
-  .homepage {
-    background-color: rgba(255, 255, 255, 0.565);
+  .intro-overlap {
     width: 100vw;
-    height: 100vh;
-    padding-top: 2rem;
-    header {
-      margin: 0rem auto;
-      width: 90vw;
-      background-color: $accent-color;
-      @include flexbox(center, space-between);
-      padding: 1rem;
-      border-radius: 0.5rem;
-      z-index: 100;
-      transition: top 0.3s;
-      nav {
-        width: 30vw;
-        min-width: 350px;
-        @include flexbox(center, flex-start);
-        gap: 2rem;
-        a {
-          font-size: 0.75rem;
-          text-decoration: none;
-          color: $primary-color;
-          text-transform: capitalize;
-          font-weight: 450;
-        }
-      }
-      .hire-btn {
-        border: none;
-        outline: none;
-        background-color: $accent-color;
-        color: $primary-color;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        text-transform: capitalize;
-      }
+    padding: 7rem 0px;
+    background-color: $accent-color;
+    color: $primary-color;
+    @include flexbox(center, center);
+    .left-section,
+    .right-section {
+      // width: 50%;
+      padding: 0px 5rem;
+      font-weight: 300;
     }
-    .home-page-text {
-      z-index: 2;
-      height: 80vh;
-      @include flexbox(center, center);
-      flex-direction: column;
-      gap: 1.5rem;
-      .number-codes {
-        background-color: $accent-second-color;
-        padding: 0.2rem 1rem;
-        border-radius: 50px;
-        font-weight: 450;
-      }
-      .main-heading {
-        font-size: 3rem;
-        text-align: center;
-        font-weight: 600;
-      }
-      .semi-heading {
-        backdrop-filter: blur(1rem);
-        padding: 0.25rem 0.75rem;
-        border-radius: 50px;
-      }
-      .browse-btn {
-        border: none;
-        outline: none;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        background-color: $accent-color;
-        color: $primary-color;
-        transition: 0.2s;
-      }
+    .left-section {
+      font-size: 3rem;
+      width: 40%;
     }
-  }
-
-  .homepage-gallery {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    z-index: -2;
-    .item {
-      position: absolute;
-      width: 200px;
-      height: 275px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.upload-wrap {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem 2rem;
-  background-color: $accent-second-color;
-  border-radius: 1rem;
-  .card {
-    .heading {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-    .drop-box {
-      border: 1px dashed $primary-color;
-      padding: 1rem 1rem;
-      @include flexbox(center, center);
+    .right-section {
+      width: 60%;
+      @include flexbox(flex-start, center);
       flex-direction: column;
       gap: 2rem;
-      .sub-heading {
-        margin-bottom: 0.5rem;
+      .text {
         font-size: 1rem;
       }
-      .inputfield {
-        @include flexbox(center, center);
-        flex-direction: column;
-        button {
-          background-color: $accent-color;
-          color: $primary-color;
-          outline: none;
-          border: none;
-          padding: 0.3rem 0.75rem;
-          cursor: pointer;
+      .sell-btn {
+        border: none;
+        outline: none;
+        background-color: $accent-second-color;
+        padding: 0.5rem 2rem;
+        border-radius: 50px;
+      }
+    }
+  }
+  .second-page {
+    height: 100vh;
+    background-image: url(../img/grid2.svg);
+    background-color: $primary-color;
+    @include flexbox(center, center);
+    flex-direction: column;
+    overflow: hidden;
+    width: 100vw;
+    .slider {
+      display: flex;
+      width: 100vw;
+      overflow: hidden;
+      .slide-track {
+        display: flex;
+        width: calc(250px * 10);
+        .slide {
+          width: 250px;
+          img {
+            width: 250px;
+            transition: 0.2s;
+            // filter: grayscale(100%);
+            &:hover {
+              transform: scale(1.1);
+              filter: grayscale(100%);
+            }
+          }
         }
       }
-      .btn-wrap {
-        button {
-          outline: none;
-          border: 0.5px solid $accent-color;
-          background-color: #fff;
-          color: $accent-color;
-          padding: 0.3rem 0.75rem;
-          cursor: pointer;
+      .track1 {
+        -webkit-animation: scroll 10s linear infinite;
+        animation: scroll 10s linear infinite;
+        // &:hover {
+        //   animation-play-state: paused;
+        // }
+      }
+      .track2 {
+        -webkit-animation: scrollrev 7s linear infinite;
+        animation: scrollrev 7s linear infinite;
+      }
+      .track3 {
+        -webkit-animation: scroll 7s linear infinite;
+        animation: scroll 7s linear infinite;
+      }
+      @-webkit-keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+      @-webkit-keyframes scrollrev {
+        100% {
+          transform: translateX(0);
+        }
+        0% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+
+      @keyframes scrollrev {
+        100% {
+          transform: translateX(0);
+        }
+        0% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+    }
+  }
+  .buy-section {
+    background-image: url(../img/grid2.svg);
+    background-color: $primary-color;
+    border: 1px solid pink;
+    height: 100vh;
+    @include flexbox(center, center);
+    flex-direction: column;
+    .row-section {
+      border: 1px solid red;
+      padding: 1rem 4rem;
+      width: 100vw;
+      .grid {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        .box {
+          @include flexbox(center, center);
+          flex-direction: column;
+          border-radius: 0.5rem;
+          background-size: 100% auto;
+          transition: 0.2s;
+          overflow: hidden;
+          &:hover {
+            transform: scale(1.03);
+          }
+          .about-section {
+            color: $primary-color;
+            width: 100%;
+            height: 40vh;
+            min-height: 100px;
+            @include flexbox(flex-end, center);
+            .text-content {
+              backdrop-filter: blur(1rem);
+              background-color: #0f0f0f;
+              @include flexbox(flex-start, flex-end);
+              flex-direction: column;
+              width: 100%;
+              padding: 1rem 0.75rem;
+              .design-name {
+                font-size: 1rem;
+                text-transform: capitalize;
+                font-weight: 500;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+              .bottom {
+                margin-top: 1rem;
+                width: 100%;
+                @include flexbox(center, space-between);
+                .add-to-cart {
+                  border: none;
+                  outline: none;
+                  background-color: $accent-second-color;
+                  color: $primary-color;
+                  padding: 0.5rem 0.5rem;
+                  border-radius: 50px;
+                  text-transform: capitalize;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
         }
       }
     }
