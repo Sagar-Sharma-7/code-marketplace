@@ -298,17 +298,17 @@ body {
   transform: scale(1.1);
 }
 .overlap-section .second-page .slider .track1 {
-  animation: scroll 7s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 .overlap-section .second-page .slider .track2 {
-  animation: scrollrev 7s linear infinite;
+  animation: scrollrev 15s linear infinite;
 }
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-750px);
+    transform: translateX(-1000px);
   }
 }
 @keyframes scrollrev {

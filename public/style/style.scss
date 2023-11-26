@@ -296,15 +296,15 @@ body {
         }
       }
       .track1 {
-        -webkit-animation: scroll 7s linear infinite;
-        animation: scroll 7s linear infinite;
+        -webkit-animation: scroll 15s linear infinite;
+        animation: scroll 15s linear infinite;
         // &:hover {
         //   animation-play-state: paused;
         // }
       }
       .track2 {
-        -webkit-animation: scrollrev 7s linear infinite;
-        animation: scrollrev 7s linear infinite;
+        -webkit-animation: scrollrev 15s linear infinite;
+        animation: scrollrev 15s linear infinite;
       }
 
       @-webkit-keyframes scroll {
@@ -312,7 +312,7 @@ body {
           transform: translateX(0);
         }
         100% {
-          transform: translateX(calc(-250px * 3));
+          transform: translateX(calc(-250px * 4));
         }
       }
 
@@ -321,15 +321,15 @@ body {
           transform: translateX(0);
         }
         100% {
-          transform: translateX(calc(-250px * 3));
+          transform: translateX(calc(-250px * 4));
         }
       }
       @-webkit-keyframes scrollrev {
-        100% {
-          transform: translateX(0);
-        }
         0% {
           transform: translateX(calc(-250px * 4));
+        }
+        100% {
+          transform: translateX(0);
         }
       }
 
