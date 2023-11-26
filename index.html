@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graphica</title>
+    <title>Code MarketHub</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -48,14 +48,18 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi,
             magnam
           </p>
-          <button class="browse-btn">Browse Codes</button>
+           <a href="#getstarted"></href><button class="browse-btn">
+           Get Started
+          </button></a>
         </div>
       </div>
       <div class="homepage-gallery"></div>
     </div>
 
     <div class="overlap-section">
+      <p class="empty"></p>
       <div class="banner"></div>
+      <a name="getstarted"></a>
       <div class="intro-overlap">
         <div class="left-section">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -272,6 +276,25 @@
         </div>
       </div>
       <!-- buy section -->
+
+      <div class="cart-section">
+        <div class="heading">Order Summary</div>
+        <div class="orders-section">
+          <div class="orders">
+            <div class="template-name-wrap">
+              <div class="template-name">Portfolio</div>
+            </div>
+            <div class="template-price-wrap">
+              <div class="template-price">$9.99</div>
+            </div>
+          </div>
+          <div class="total">
+            <div>Total</div>
+            <div class="total-price">$0.00</div>
+          </div>
+        </div>
+        <button class="order-btn">Buy Now</button>
+      </div>
       <a name="code"></a>
       <div class="buy-section">
         <div class="first-row row-section">
@@ -302,7 +325,23 @@
                   <p class="design-name">design name</p>
                   <div class="bottom">
                     <p class="price">$9.99</p>
-                    <button class="add-to-cart">
+                    <button class="add-to-cart"  data-name="portfolio" data-price=9.99>
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="box"
+              style="background-image: url(./public/img/img7.jpg)"
+            >
+              <div class="about-section">
+                <div class="text-content">
+                  <p class="design-name"data-name="e-commerce">design name</p>
+                  <div class="bottom">
+                    <p class="price" >$9.99</p>
+                    <button class="add-to-cart" data-name="e-commerce" data-price=9.99>
                       <i class="fa-regular fa-heart"></i>
                     </button>
                   </div>
@@ -318,23 +357,7 @@
                   <p class="design-name">design name</p>
                   <div class="bottom">
                     <p class="price">$9.99</p>
-                    <button class="add-to-cart">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="box"
-              style="background-image: url(./public/img/img7.jpg)"
-            >
-              <div class="about-section">
-                <div class="text-content">
-                  <p class="design-name">design name</p>
-                  <div class="bottom">
-                    <p class="price">$9.99</p>
-                    <button class="add-to-cart">
+                    <button class="add-to-cart" data-name="e-commerce2" data-price=9.99>
                       <i class="fa-regular fa-heart"></i>
                     </button>
                   </div>
@@ -477,7 +500,52 @@
           </div>
         </div>
       </div>
+      
+    <div class="footer-section">
+      <div class="note-section">
+        <div class="tags-wrap">
+          <p class="trusted-by">Trusted By</p>
+          <div class="tags">
+            <div class="row">
+              <div class="tags">WordPress</div>
+              <div class="tags">Wix</div>
+              <div class="tags">Google</div>
+              <div class="tags">Moz</div>
+              <div class="tags">Amazon</div>
+              <div class="tags">Behance</div>
+              <div class="tags">Webflow</div>
+            </div>
+            <div class="row">
+              <div class="tags">Sitecore</div>
+              <div class="tags">Figma</div>
+              <div class="tags">Canva</div>
+              <div class="tags">Shutterstock</div>
+              <div class="tags">Cloudflare</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="section1 section">
+          <nav>
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+            <a href="">Cookies</a>
+          </nav>
+        </div>
+        <div class="section2 section">
+          <i class="fa-regular fa-copyright"></i> 2023 Code MarketHub
+        </div>
+        <div class="section3 section">
+          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </footer>
+      </div>
     </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
       integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
@@ -486,5 +554,6 @@
     ></script>
     <script src="./public/script/homepage.js" type="module"></script>
     <script src="./src/main.js"></script>
+    <script src="./public/script/cart.js"></script>
   </body>
 </html>
