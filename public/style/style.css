@@ -91,7 +91,7 @@ body {
   text-transform: capitalize;
   font-weight: 450;
 }
-.main-container .homepage header .hire-btn {
+.main-container .homepage header .cart-btn {
   border: none;
   outline: none;
   background-color: #0f0f0f;
@@ -99,6 +99,8 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   text-transform: capitalize;
+  border: 1px solid green;
+  cursor: pointer;
 }
 .main-container .homepage .home-page-text {
   z-index: 2;
@@ -315,16 +317,24 @@ body {
   background-image: url(../img/grid2.svg);
   background-color: #fffff0;
   border: 1px solid pink;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 .overlap-section .buy-section .row-section {
-  border: 1px solid red;
-  padding: 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
   width: 100vw;
+}
+.overlap-section .buy-section .row-section .section-heading {
+  text-align: left;
+  width: 90vw;
+  margin-bottom: 1rem;
 }
 .overlap-section .buy-section .row-section .grid {
   width: 90vw;
