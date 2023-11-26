@@ -270,6 +270,11 @@ body {
   width: 100vw;
   gap: 1rem;
 }
+.overlap-section .second-page .explore-text {
+  font-size: 2rem;
+  margin-top: -4rem;
+  font-weight: 600;
+}
 .overlap-section .second-page .slider {
   display: flex;
   width: 100vw;
@@ -285,6 +290,7 @@ body {
 .overlap-section .second-page .slider .slide-track .slide img {
   width: 250px;
   transition: 0.2s;
+  border: 2px solid #fffff0;
 }
 .overlap-section .second-page .slider .slide-track .slide img:hover {
   transform: scale(1.1);
