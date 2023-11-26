@@ -11,7 +11,7 @@ const itemPositions = [
   { top: "-10%", left: "65%" },
   { top: "10%", left: "85%" },
   { top: "40%", left: "60%" },
-  { top: "80%", left: "70%" },
+  { top: "80%", left: "90%" },
   { top: "50%", left: "95%" },
 ];
 

@@ -167,6 +167,7 @@ body {
   padding: 2rem 2rem;
   background-color: #feda79;
   border-radius: 1rem;
+  z-index: 9999;
 }
 .upload-wrap .card .heading {
   font-size: 1rem;
@@ -267,6 +268,7 @@ body {
   flex-direction: column;
   overflow: hidden;
   width: 100vw;
+  gap: 1rem;
 }
 .overlap-section .second-page .slider {
   display: flex;
@@ -286,23 +288,19 @@ body {
 }
 .overlap-section .second-page .slider .slide-track .slide img:hover {
   transform: scale(1.1);
-  filter: grayscale(100%);
 }
 .overlap-section .second-page .slider .track1 {
-  animation: scroll 10s linear infinite;
+  animation: scroll 7s linear infinite;
 }
 .overlap-section .second-page .slider .track2 {
   animation: scrollrev 7s linear infinite;
-}
-.overlap-section .second-page .slider .track3 {
-  animation: scroll 7s linear infinite;
 }
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1000px);
+    transform: translateX(-750px);
   }
 }
 @keyframes scrollrev {
@@ -319,33 +317,83 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100vw;
   width: 40vw;
   min-width: 300px;
   z-index: 9999;
+  display: none;
+  transition: ease-in-out;
+  transition-duration: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.overlap-section .cart-section .heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 .overlap-section .cart-section .orders-section {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 .overlap-section .cart-section .orders-section .orders {
-  width: 30vh;
-  border: 1px solid green;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.25rem 0.25rem;
+}
+.overlap-section .cart-section .orders-section .orders .template-name-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.overlap-section .cart-section .orders-section .orders .template-price-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 .overlap-section .cart-section .orders-section .total {
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.25rem;
+  margin-top: 1rem;
+}
+.overlap-section .cart-section .order-btn {
+  margin-top: 1rem;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  transition: 0.2s;
+  border: 1px solid #fffff0;
+}
+.overlap-section .cart-section .order-btn:hover {
+  background-color: #feda79;
+  outline: none;
+  cursor: pointer;
+}
+.overlap-section .cart-section .cancel-btn {
+  margin-top: 1rem;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  transition: 0.2s;
+  border: 1px solid #fffff0;
+}
+.overlap-section .cart-section .cancel-btn:hover {
+  background-color: #feda79;
+  outline: none;
+  cursor: pointer;
 }
 .overlap-section .buy-section {
   background-image: url(../img/grid2.svg);

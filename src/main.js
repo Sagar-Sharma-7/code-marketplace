@@ -2,6 +2,8 @@ const cancelBtn = document.querySelector(".cancel");
 const uploadBtn = document.querySelector(".upload");
 const header = document.querySelector(".header");
 const floatingNav = document.querySelector(".floating-nav");
+const uploadWrap = document.querySelector(".upload-wrap");
+const sellBtn = document.querySelector(".sell-btn");
 
 // floating navbar
 let iniScrollPos = window.pageYOffset;
@@ -46,4 +48,14 @@ imgInput.addEventListener("change", function (e) {
   console.log(imgFilename);
   imgFilePara.innerHTML = `${imgFilename}`;
 });
-// incomplete upload section
+
+sellBtn.addEventListener("click", () => {
+  uploadWrap.style.display = "block";
+});
+cancelBtn.addEventListener("click", () => {
+  uploadWrap.style.display = "none";
+});
+
+uploadBtn.addEventListener("click", () => {
+  uploadWrap.style.display = "none";
+});
