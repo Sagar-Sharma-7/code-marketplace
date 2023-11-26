@@ -429,6 +429,8 @@ body {
         text-align: left;
         width: 90vw;
         margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
       }
       .grid {
         width: 90vw;
@@ -558,3 +560,16 @@ body {
     }
   }
 }
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// responsive
