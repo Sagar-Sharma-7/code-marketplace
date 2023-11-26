@@ -129,6 +129,8 @@ body {
         backdrop-filter: blur(1rem);
         padding: 0.25rem 0.75rem;
         border-radius: 50px;
+        text-align: center;
+        max-width: 600px;
       }
       .browse-btn {
         border: none;
@@ -573,3 +575,37 @@ body {
 }
 
 // responsive
+@media all and (max-width: 800px) {
+  .floating-nav {
+    width: 80vw;
+  }
+  .main-container {
+    .homepage {
+      .home-page-text {
+        .main-heading {
+          font-size: 2rem;
+        }
+        .semi-heading {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  .overlap-section {
+    .intro-overlap {
+      flex-direction: column;
+      gap: 3rem;
+      .left-section,
+      .right-section {
+        width: 90%;
+      }
+    }
+    .buy-section {
+      .row-section {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}

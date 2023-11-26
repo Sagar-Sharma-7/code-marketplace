@@ -126,6 +126,8 @@ body {
           backdrop-filter: blur(1rem);
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
+  text-align: center;
+  max-width: 600px;
 }
 .main-container .homepage .home-page-text .browse-btn {
   border: none;
@@ -583,4 +585,27 @@ body {
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
+}
+
+@media all and (max-width: 800px) {
+  .floating-nav {
+    width: 80vw;
+  }
+  .main-container .homepage .home-page-text .main-heading {
+    font-size: 2rem;
+  }
+  .main-container .homepage .home-page-text .semi-heading {
+    font-size: 0.75rem;
+  }
+  .overlap-section .intro-overlap {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .overlap-section .intro-overlap .left-section,
+  .overlap-section .intro-overlap .right-section {
+    width: 90%;
+  }
+  .overlap-section .buy-section .row-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
